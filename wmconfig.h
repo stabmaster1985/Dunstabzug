@@ -29,7 +29,7 @@ struct Settings {
 } sett;
 
 // callback function for status information
-std::function<void(char*)> statusCallback;
+std::function<void(const char*)> statusCallback;
 
 //flag for saving data
 bool shouldSaveConfig = false;
@@ -83,7 +83,7 @@ void initiateFactoryReset()
   }
 }
 
-void setup_wifi(std::function<void(char*)> func = 0) {
+void setup_wifi(std::function<void(const char*)> func = 0) {
 
   statusCallback = func;
 
